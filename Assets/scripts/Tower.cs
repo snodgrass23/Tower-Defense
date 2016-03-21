@@ -51,9 +51,6 @@ public class Tower : MonoBehaviour {
 
 	float ShotPower () {
 		float distanceToTarget = Vector3.Distance (currentTarget.transform.position, this.transform.position);
-		Transform player = GameObject.FindGameObjectWithTag ("Player").transform;
-		print("Distance to player: " + Vector3.Distance (player.position, this.transform.position));
-		print("Shot power: " + (distanceToTarget * powerMultiplyer));
 		return distanceToTarget * powerMultiplyer;
 	}
 

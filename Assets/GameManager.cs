@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour {
 
 		print("Starting wave " + waveNumber + " with " + numEnemies + " enemies of type: " + enemyType.name);
 
+		//TODO instantiate at slightly different positions so they don't collide immmediately with each other
 		for (int i = 0; i < numEnemies; i++) {
 			Instantiate (enemyType, spawnPoint.position, spawnPoint.rotation);	
 		}

@@ -22,10 +22,8 @@ public class CannonBallExplosion : MonoBehaviour {
 	private void OnCollisionEnter(Collision otherObj) {
 		hitLayer = LayerMask.LayerToName (otherObj.gameObject.layer);
 
-		if (hitLayer.Equals ("Damageable") || hitLayer.Equals ("Terrain")) {
-			print ("Cannonbal hit a " + otherObj.gameObject.name);
+		if (hitLayer.Equals ("Damageable") || hitLayer.Equals ("Terrain"))
 			blowUp ();
-		}
 	}
 
 	private void blowUp() {
@@ -39,5 +37,9 @@ public class CannonBallExplosion : MonoBehaviour {
 		Destroy (gameObject);
 
 		GetComponent<MeshRenderer> ().enabled = false;
+	}
+
+	private void damageNearbyEnemies () {
+		//TODO implement damage of nearby enemies
 	}
 }
