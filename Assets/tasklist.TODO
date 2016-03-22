@@ -1,5 +1,7 @@
- ☐ cannonballs should cause damage to hellephants
+ ☐ update spawn to not place all enemies at the same time in same place
+ ☐ cannonballs should cause damage to hellephants @high
    ☐ play damage animation and sound
+ ☐ add sound effect to turret rotating
  ☐ after enough damage, hellephants should die
  ☐ track credits when enemy killed
  ☐ setup temp tower spawn points

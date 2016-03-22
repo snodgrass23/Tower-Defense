@@ -17,6 +17,7 @@ public class Tower : MonoBehaviour {
 	float timer;
 	AudioSource shotAudio;
 	float deltaAngle;
+	float lobAngle = 2.5f;
 	float powerMultiplyer = 155;
 
 	void Awake () {
@@ -41,7 +42,7 @@ public class Tower : MonoBehaviour {
 	void Fire () {
 		timer = 0f;
 		Rigidbody ballInstance = Instantiate (cannonBall, cannon.position, cannon.rotation) as Rigidbody;
-		ballInstance.AddForce (ShotPower () * cannon.forward);
+		ballInstance.AddForce (ShotPower () * cannon.forward, ForceMode.Acceleration);
 		shotAudio.Play ();
 
 		foreach (var effect in shotExplosion.GetComponentsInChildren<ParticleSystem> ()) {
@@ -57,7 +58,7 @@ public class Tower : MonoBehaviour {
 	void LookAtTarget () {
 		Vector3 direction = currentTarget.transform.position - this.transform.position;
 		Quaternion lookRotation = Quaternion.LookRotation (direction);
-		Quaternion targetRotation = Quaternion.Euler (0, lookRotation.eulerAngles.y, 0);
+		Quaternion targetRotation = Quaternion.Euler (lookRotation.eulerAngles.x - lobAngle, lookRotation.eulerAngles.y, 0);
 		this.transform.rotation = Quaternion.Lerp (this.transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
 
 		deltaAngle = Quaternion.Angle (targetRotation, this.transform.rotation);
