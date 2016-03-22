@@ -3,29 +3,26 @@ using System.Collections;
 
 public class Tower : MonoBehaviour {
 
-	public string targetTag = "Player";
+	public string targetTag = "Enemy";
 	public float turnSpeed;
 	public float minDistance;
 	public float maxDistance;
 	public float reloadTime;
-	public GameObject shotExplosion;
 
+	public GameObject cannonExplosion;
 	public Rigidbody cannonBall;
-	public Transform cannon;
+	public Transform cannonEnd;
+	public GameObject turret;
 
 	GameObject currentTarget;
-	float timer;
-	AudioSource shotAudio;
-	float deltaAngle;
-	float lobAngle = 2.5f;
-	float powerMultiplyer = 155;
+	float timer = 100;
+	float deltaAngle = 360f;
 
-	void Awake () {
-		shotAudio = GetComponent<AudioSource> ();	
-//		currentTarget = GameObject.FindGameObjectWithTag ("Player");
-	}
+	//TODO find better way to handle power of shot
+	float lobAngle = 7f;
+	float powerMultiplyer = 27;
 	
-	// Update is called once per frame
+
 	void Update () {
 
 		timer += Time.deltaTime;
@@ -41,13 +38,10 @@ public class Tower : MonoBehaviour {
 
 	void Fire () {
 		timer = 0f;
-		Rigidbody ballInstance = Instantiate (cannonBall, cannon.position, cannon.rotation) as Rigidbody;
-		ballInstance.AddForce (ShotPower () * cannon.forward, ForceMode.Acceleration);
-		shotAudio.Play ();
+		Rigidbody ballInstance = Instantiate (cannonBall, cannonEnd.position, cannonEnd.rotation) as Rigidbody;
+		ballInstance.AddForce (ShotPower () * cannonEnd.forward, ForceMode.Acceleration);
 
-		foreach (var effect in shotExplosion.GetComponentsInChildren<ParticleSystem> ()) {
-			effect.Play ();
-		}
+		Instantiate (cannonExplosion, cannonEnd.position, cannonEnd.rotation);
 	}
 
 	float ShotPower () {
@@ -56,12 +50,12 @@ public class Tower : MonoBehaviour {
 	}
 
 	void LookAtTarget () {
-		Vector3 direction = currentTarget.transform.position - this.transform.position;
+		Vector3 direction = currentTarget.transform.position - turret.transform.position;
 		Quaternion lookRotation = Quaternion.LookRotation (direction);
 		Quaternion targetRotation = Quaternion.Euler (lookRotation.eulerAngles.x - lobAngle, lookRotation.eulerAngles.y, 0);
-		this.transform.rotation = Quaternion.Lerp (this.transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
+		turret.transform.rotation = Quaternion.Lerp (turret.transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
 
-		deltaAngle = Quaternion.Angle (targetRotation, this.transform.rotation);
+		deltaAngle = Quaternion.Angle (targetRotation, turret.transform.rotation);
 	}
 
 	void FindTarget () {
