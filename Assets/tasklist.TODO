@@ -1,9 +1,32 @@
  ☐ cannonballs should cause damage to hellephants
+   ☐ play damage animation and sound
  ☐ after enough damage, hellephants should die
+ ☐ track credits when enemy killed
+ ☐ setup temp tower spawn points
+   ☐ when player standing at nearby control panel, can build tower
+   ☐ track cost for towers and only allow build when enough credits
  ☐ player camera should have cursor to aim future weapons as well as perform actions
  ☐ simple crossbow weapon
  ☐ screen flash red vignette when hit by enemy
- ☐
+ ☐ handle escape key
+   ☐ pause game (ish)
+   ☐ show basic menu
+   ☐ option to quit game
+   ☐ option to restart game
+ ☐ add control panel to side of tower
+ ☐ performing action on tower control panel moves into control mode
+   ☐ still vulnerable to enemies
+   ☐ locked movement mode with camera attached to turret
+   ☐ controls rotate turret
+   ☐ look cursor determines distance
+   ☐ action button fires cannon
+   ☐ damage and fire rate increase while under player control
+ ☐ powerup weapons randomly appear as drops from enemies
+   ☐ weapons are limited ammo high power "interesting" weapons
+ ☐ update game manager enemy handling
+   ☐ add enemy types and spawn points
+   ☐ more complex, smarter wave handling
+
 
 
 --- ✄ -----------------------
