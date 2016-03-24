@@ -432,7 +432,11 @@ PlayerSettings:
   - XboxOne::enus
   Standalone::VR::enable: 0
   XboxOne::enus: 1
-  stringPropertyNames: []
+  stringPropertyNames:
+  - Build_ServiceEnabled::Build_ServiceEnabled
+  - UNet_ServiceEnabled::UNet_ServiceEnabled
+  Build_ServiceEnabled::Build_ServiceEnabled: True
+  UNet_ServiceEnabled::UNet_ServiceEnabled: True
   cloudProjectId: dd53e63d-fb57-4e3a-8ae6-266f96563362
   projectName: Tower Defense
   organizationId: snodgrass23
