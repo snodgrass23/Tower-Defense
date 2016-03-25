@@ -410,6 +410,7 @@ GameObject:
   - 54: {fileID: 1366775348}
   - 136: {fileID: 1366775347}
   - 114: {fileID: 1366775346}
+  - 114: {fileID: 1366775350}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -517,6 +518,19 @@ Transform:
   - {fileID: 1945172472}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1366775350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1366775345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73a167655e4449f7b99b32d8b00c670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitParticles: {fileID: 0}
+  startingHitPoints: 100
 --- !u!1001 &1531159746
 Prefab:
   m_ObjectHideFlags: 0
@@ -573,6 +587,7 @@ GameObject:
   - 4: {fileID: 1595094489}
   - 218: {fileID: 1595094488}
   - 154: {fileID: 1595094487}
+  - 114: {fileID: 1595094490}
   m_Layer: 10
   m_Name: Terrain
   m_TagString: Untagged
@@ -634,6 +649,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 232219062}
   m_RootOrder: 0
+--- !u!114 &1595094490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1595094486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73a167655e4449f7b99b32d8b00c670, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hitParticles: {fileID: 141536, guid: 01fd83c472de8417288e3e0cb5c0c4d6, type: 2}
+  startingHitPoints: 0
 --- !u!1 &1803866242
 GameObject:
   m_ObjectHideFlags: 0

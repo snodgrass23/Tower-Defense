@@ -6,7 +6,6 @@ public class InstanceDestroyer : MonoBehaviour {
 	public float maxLifetime;
 
 	void Start () {
-        Debug.Log("InstanceDestroyer started " + this.gameObject.name);
 		Destroy(gameObject, maxLifetime);
 	}
     

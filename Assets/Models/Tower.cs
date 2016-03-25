@@ -31,7 +31,7 @@ public class Tower : MonoBehaviour {
 		if (currentTarget != null) {
 			LookAtTarget ();
 
-			if (timer >= reloadTime && deltaAngle < 15f)
+			if (timer >= reloadTime && deltaAngle < 10f)
 				Fire ();
 		}
 	}

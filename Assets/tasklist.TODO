@@ -4,25 +4,17 @@
     ☐ start menu
     ☐ load game
     ☐ pause menu
-       ☐ exit, restart options
+       ☐ exit, restart
     ☐ figure out state persistance
  ☐ update spawn to not place all enemies at the same time in same place
- ☐ cannonballs should cause damage to hellephants @high
-   ☐ play damage animation and sound
  ☐ add sound effect to turret rotating
- ☐ after enough damage, hellephants should die
  ☐ track credits when enemy killed
  ☐ setup temp tower spawn points
    ☐ when player standing at nearby control panel, can build tower
    ☐ track cost for towers and only allow build when enough credits
  ☐ player camera should have cursor to aim future weapons as well as perform actions
  ☐ simple crossbow weapon
- ☐ screen flash red vignette when hit by enemy
- ☐ handle escape key
-   ☐ pause game (ish)
-   ☐ show basic menu
-   ☐ option to quit game
-   ☐ option to restart game
+ ☐ screen flash red vignette when damaged
  ☐ add control panel to side of tower
  ☐ performing action on tower control panel moves into control mode
    ☐ still vulnerable to enemies
