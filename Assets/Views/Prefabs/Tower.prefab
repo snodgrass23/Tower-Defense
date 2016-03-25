@@ -494,7 +494,7 @@ MonoBehaviour:
   targetTag: Enemy
   turnSpeed: 4
   minDistance: 15
-  maxDistance: 150
+  maxDistance: 200
   reloadTime: 3
   cannonExplosion: {fileID: 159020, guid: e09c22e3afc244f418a1af7432058b28, type: 2}
   cannonBall: {fileID: 5490942, guid: 7aa2e9652bd9f4300b11f3bbf47a87e2, type: 2}

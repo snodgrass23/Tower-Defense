@@ -1,3 +1,11 @@
+ GENERAL TODO ITEMS
+
+ ☐ start adding game structure
+    ☐ start menu
+    ☐ load game
+    ☐ pause menu
+       ☐ exit, restart options
+    ☐ figure out state persistance
  ☐ update spawn to not place all enemies at the same time in same place
  ☐ cannonballs should cause damage to hellephants @high
    ☐ play damage animation and sound
@@ -36,10 +44,24 @@
 BASIC CONCEPT IDEAS
 
 - instead of simply purchasing towers, you have to tell them to build and then wait until they are done
+- player has weapon in one hand, build/repair tool in the other
 - gather resources from area (wood, iron, etc) to build towers
 - modify towers' projectiles
+- at start of game, there is old campsite with evidence of old battles
+   - maybe one leftover tower that can be repaired
+- player can find interesting artifacts from old battles by exploring
+    - skeleton from previously killed players
+    - when player dies, there skeleton is added and they start again as new player
+ - clues around campsite to build first tower and get first weapon
 
 
+
+---- ✄ -----------------------
+
+LINKS FOR UNITY
+- package/dependency managers:
+    https://github.com/modesttree/projeny
+    https://github.com/modesttree/Zenject
 
 
 

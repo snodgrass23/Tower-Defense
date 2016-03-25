@@ -9,7 +9,7 @@ public class Projectile : MonoBehaviour {
 	string hitLayer;
 
 	private void Start() {
-		Destroy(gameObject, maxLifetime);
+        InstanceDestroyer.Create(gameObject, 0.5f);
 	}
 
 	private void OnCollisionEnter(Collision otherObj) {
